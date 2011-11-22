@@ -1,0 +1,16 @@
+
+jython appears not to support Python2.6
+	this means that the json module of the Python standard library can not be used by Jython
+	to support json under Jython:
+		I wrote a very simple module for json serialization (however -- not well-tested)
+		to read json, I use python's eval
+		there is a wrapper module that:
+			tries to import json
+			if that fails, it imports the myJSON
+				which, however, is dangerous, as it uses eval to read in JSON-formatted strings
+	
+jython does not come with argparse; however, the argparse from the python2.7 standard library works under Jython
+	the library just needs to be dropped into the Lib folder in the Jython installation folder
+
+execution speed is MUCH slower -- some stuff seems to take on the order of 5 to 10 times as long under Jython
+

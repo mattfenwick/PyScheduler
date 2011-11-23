@@ -167,36 +167,36 @@ class DispatcherTest(unittest.TestCase):
     def testDispatcherInterface(self):
         pass
     def testBuildSelectors1d(self):
-        params = {'dimensions': [self.dim]}
+        params = {'dimensions': [self.dim], 'specialHaltonPoints': 20}
         for i in self.imps:
             params['forcedSelector'] = i
             _ = disp.getObject(params)
     def testBuildSelectors2d(self):
-        params = {'dimensions': [self.dim, self.dim]}
+        params = {'dimensions': [self.dim, self.dim], 'specialHaltonPoints': 200}
         for i in self.imps:
             params['forcedSelector'] = i
             _ = disp.getObject(params)
     def testBuildSelectors3d(self):
-        params = {'dimensions': [self.dim, self.dim, self.dim]}
+        params = {'dimensions': [self.dim, self.dim, self.dim], 'specialHaltonPoints': 2000}
         for i in self.imps:
             params['forcedSelector'] = i
             _ = disp.getObject(params)
     def testRunSelectors1d(self):
-        params = {'dimensions': [self.dim]}
+        params = {'dimensions': [self.dim], 'specialHaltonPoints': 20}
         for i in self.imps:
             params['forcedSelector'] = i
             g = disp.getObject(params)
             points = g()
             [(p[0] + 1) for p in points]
     def testRunSelectors2d(self):
-        params = {'dimensions': [self.dim, self.dim]}
+        params = {'dimensions': [self.dim, self.dim], 'specialHaltonPoints': 200}
         for i in self.imps:
             params['forcedSelector'] = i
             g = disp.getObject(params)
             points = g()
             [(p[0] + 1 + p[1]) for p in points]
     def testRunSelectors3d(self):
-        params = {'dimensions': [self.dim, self.dim, self.dim]}
+        params = {'dimensions': [self.dim, self.dim, self.dim], 'specialHaltonPoints': 2000}
         for i in self.imps:
             params['forcedSelector'] = i
             g = disp.getObject(params)

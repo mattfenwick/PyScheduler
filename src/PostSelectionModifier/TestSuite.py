@@ -23,12 +23,14 @@ import Bursty as bu
 
 class ModifierBase(un.TestCase):
     def testPointsWithinBoundaries(self):
+        self.assertTrue(False, "test not implemented")
         coordinates = [pt.getCoordinates() for pt in self.newPoints]
         for coor in coordinates:
             zipped = zip(coor, self.rangeLists)# [1, 2] and [[1, 128], [1, 128]] -> [(1, [1, 128]), (2, [1, 128])]
             for (c, (high, low)) in zipped:
                 self.assertTrue(low <= c <= high, "new point within boundaries")
     def testNoRepeatedCoordinates(self):
+        self.assertTrue(False, "test not implemented")
         coordinates = [tuple(pt.getCoordinates()) for pt in self.newPoints]
         coordinateSet = set(coordinates)
         self.assertEqual(len(coordinates), len(coordinateSet), "coordinates of each point is unique")

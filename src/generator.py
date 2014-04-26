@@ -169,3 +169,56 @@ def distance(pt, origin):
     dist = sqrt(sumSquares)
     return dist
 
+
+
+def all_lower_bounds(ranges):
+    """
+    algorithm:
+        generate all points which have at least one coordinate equal to one of the lower bounds as defined by the ranges
+
+    Example:
+        in a 2d experiment:
+        if range1 = [1,2,3,4] and range2 also equals [1,2,3,4],
+        then points [1,1], [1,2], [1,3], [1,4], [2,1], [3,1], [4,1] will be generated
+    """
+    mins = [x[0] for x in ranges]
+    allPoints = lg.multipleDimensions(ranges)
+    specialPoints = filter(lambda x: not (my_alb_filter(x, mins)), allPoints)
+    return specialPoints
+
+def my_alb_filter(point, mins):
+    zipped = zip(point, mins)
+    return all([d[0] != d[1] for d in zipped])
+
+
+
+def first_point(ranges):
+    '''
+    algorithm:
+        generate point at low end of ranges
+    '''
+    mins = [x[0] for x in rangeLists]
+    return [tuple(mins)]
+
+
+
+def last_point(ranges):
+    '''
+    algorithm:
+        generate point at high end of ranges
+    '''
+    maxes = [x[1] for x in rangeLists]
+    return [tuple(maxes)]
+
+
+
+def first_and_last(ranges):
+    '''
+    algorithm:
+        generate points at low end and high end of ranges
+    '''
+    mins = first_point(ranges)
+    maxes = last_point(ranges)
+    points = set(mins + maxes)
+    return points
+

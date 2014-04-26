@@ -1,0 +1,46 @@
+DEBUG:root:opening file oops.txt
+DEBUG:root:{u'dimensions': [{u'range': [0, 128]}, {u'range': [0, 128]}], u'forcedSelector': u'none', u'pointSelector': u'random', u'seed': 45, u'numSelectedPoints': 150, u'blurWidth': 2, u'formatQuadrature': True, u'coordinateGenerator': u'halton', u'formatter': u'toolkit', u'numGeneratedPoints': 300, u'postSelectionModifier': u'blurred', u'quadratureMapper': u'singleRandom'}
+DEBUG:coordinateGenerator:determing requested type of coordinate generator....
+DEBUG:coordinateGenerator:parameters used: {u'dimensions': [{u'range': [0, 128]}, {u'range': [0, 128]}], u'forcedSelector': u'none', u'pointSelector': u'random', u'seed': 45, u'numSelectedPoints': 150, u'blurWidth': 2, u'formatQuadrature': True, u'coordinateGenerator': u'halton', u'formatter': u'toolkit', u'numGeneratedPoints': 300, u'postSelectionModifier': u'blurred', u'quadratureMapper': u'singleRandom'}
+DEBUG:coordinateGenerator:coordinate generator type (halton) found, attempting to find constructor
+DEBUG:coordinateGenerator:constructor found, attempting to build coordinate generator
+DEBUG:coordinateGenerator:coordinate generator successfully built
+DEBUG:specialPointSelector:determing requested type of special point selector....
+DEBUG:specialPointSelector:parameters used: {u'dimensions': [{u'range': [0, 128]}, {u'range': [0, 128]}], u'forcedSelector': u'none', u'pointSelector': u'random', u'seed': 45, u'numSelectedPoints': 150, u'blurWidth': 2, u'formatQuadrature': True, u'coordinateGenerator': u'halton', u'formatter': u'toolkit', u'numGeneratedPoints': 300, u'postSelectionModifier': u'blurred', u'quadratureMapper': u'singleRandom'}
+DEBUG:specialPointSelector:special point selector type (none) found, attempting to find constructor
+DEBUG:specialPointSelector:constructor found, attempting to build special point selector
+DEBUG:specialPointSelector:special point selector successfully built
+DEBUG:quadrature mapper:determing requested type of quadrature mapper....
+DEBUG:quadrature mapper:parameters used: {u'dimensions': [{u'range': [0, 128]}, {u'range': [0, 128]}], u'forcedSelector': u'none', u'pointSelector': u'random', u'seed': 45, u'numSelectedPoints': 150, u'blurWidth': 2, u'formatQuadrature': True, u'coordinateGenerator': u'halton', u'formatter': u'toolkit', u'numGeneratedPoints': 300, u'postSelectionModifier': u'blurred', u'quadratureMapper': u'singleRandom'}
+DEBUG:quadrature mapper:quadrature mapper type (singleRandom) found, attempting to find constructor
+DEBUG:quadrature mapper:constructor found, attempting to build quadrature mapper
+DEBUG:quadrature mapper:quadrature mapper successfully built
+DEBUG:normal point selector:determing requested type of point selector....
+DEBUG:normal point selector:parameters used: {u'dimensions': [{u'range': [0, 128]}, {u'range': [0, 128]}], u'forcedSelector': u'none', u'pointSelector': u'random', u'seed': 45, u'numSelectedPoints': 150, u'blurWidth': 2, u'formatQuadrature': True, u'coordinateGenerator': u'halton', u'formatter': u'toolkit', u'numGeneratedPoints': 300, u'postSelectionModifier': u'blurred', u'quadratureMapper': u'singleRandom'}
+DEBUG:normal point selector:point selector type (random) found, attempting to find constructor
+DEBUG:normal point selector:constructor found, attempting to build point selector
+DEBUG:normal point selector:point selector successfully built
+DEBUG:formatter:determing requested type of formatter....
+DEBUG:formatter:parameters used: {u'dimensions': [{u'range': [0, 128]}, {u'range': [0, 128]}], u'forcedSelector': u'none', u'pointSelector': u'random', u'seed': 45, u'numSelectedPoints': 150, u'blurWidth': 2, u'formatQuadrature': True, u'coordinateGenerator': u'halton', u'formatter': u'toolkit', u'numGeneratedPoints': 300, u'postSelectionModifier': u'blurred', u'quadratureMapper': u'singleRandom'}
+DEBUG:formatter:coordinate generator type (toolkit) found, attempting to find formatting module
+DEBUG:formatter:formatting module found, attempting to get formatting method
+DEBUG:formatter:formatting method successfully found
+DEBUG:post selection modifier:determing requested type of post selection modifier....
+DEBUG:post selection modifier:parameters used: {u'dimensions': [{u'range': [0, 128]}, {u'range': [0, 128]}], u'forcedSelector': u'none', u'pointSelector': u'random', u'seed': 45, u'numSelectedPoints': 150, u'blurWidth': 2, u'formatQuadrature': True, u'coordinateGenerator': u'halton', u'formatter': u'toolkit', u'numGeneratedPoints': 300, u'postSelectionModifier': u'blurred', u'quadratureMapper': u'singleRandom'}
+DEBUG:post selection modifier:post selection modifier type (blurred) found, attempting to find constructor
+DEBUG:post selection modifier:constructor found, attempting to build post selection modifier
+DEBUG:post selection modifier:post selection modifier successfully built
+DEBUG:workflow:starting workflow:  generating coordinates
+DEBUG:workflow:generated 300 points
+DEBUG:workflow:selecting special points
+DEBUG:workflow:selected special points .... points left in normal pool: 300  specially selected points: 0
+DEBUG:workflow:applying quadrature ...
+DEBUG:workflow:quadrature applied to normal and special points
+DEBUG:workflow:selecting normal points (0 already selected)
+DEBUG:workflow:selected 150 points total (special + normal)
+DEBUG:workflow:applying any post-selection modification operators to selected points ...
+DEBUG:workflow:146 points left after applying post-selection modifier ...
+DEBUG:workflow:creating sample schedule ...
+DEBUG:workflow:sample schedule completed, formatting schedule
+DEBUG:workflow:sample schedule formatted
+DEBUG:root:writing schedule to file argout.txt

@@ -1,0 +1,22 @@
+{
+    "coordinateGenerator" :    "halton",
+    "numGeneratedPoints" :     300,
+    "formatter" :              "toolkit",
+    "pointSelector" :          "random",
+    "numSelectedPoints" :      150,
+    "quadratureMapper" :       "singleRandom",
+    "forcedSelector" :         "none",
+    "postSelectionModifier":   "blurred",
+    "seed" :                   45,
+    "blurWidth":               2,
+    "formatQuadrature":        true,
+    "dimensions": [
+        {
+            "range" :      [0, 128]
+        },
+        {
+            "range" :      [0, 128]
+        }
+    ]
+}
+
